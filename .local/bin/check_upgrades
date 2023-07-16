@@ -1,0 +1,6 @@
+#!/bin/sh
+
+UC=$(pkg upgrade -n | awk 'NR==1 {print $4}' |cut -d'(' -f2)
+# ADJ=1
+# AU=$((($UC)-($ADJ)))
+echo $UC > $HOME/.local/etc/upgrade_candidates

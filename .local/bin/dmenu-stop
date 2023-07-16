@@ -1,0 +1,15 @@
+#!/bin/sh
+
+up=$(uptime | awk '{print $3}'|cut -d, -f1)
+
+action=$(echo -e "Verrouiller\nSuspendre\nArrêter\nRedémarrer"|dmenu -i -l 4 -p "Uptime : $up")
+
+if [ $action == "Verrouiller" ]; then
+	exec slock
+elif [ $action == "Suspendre" ]; then
+	zzz
+elif [ $action == "Arrêter" ]; then
+	poweroff
+elif [ $action == "Redémarrer" ]; then
+	shutdown -r now
+fi

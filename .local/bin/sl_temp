@@ -1,0 +1,14 @@
+#!/bin/sh
+
+HIGH=69
+TEMP=$(sysctl dev.cpu|grep temperature|awk 'NR==1{print $2}'|cut -dC -f1)
+
+temperature() {
+	if [ "$TEMP" -gt "$HIGH" ]; then
+		echo "^c#ff0000^ $TEMP°C^d^"
+	else
+		echo " $TEMP°C"
+	fi
+}
+
+echo $(temperature)

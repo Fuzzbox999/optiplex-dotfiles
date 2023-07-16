@@ -1,0 +1,14 @@
+#!/bin/sh
+
+UPG=$(cat /home/fuzzbox/.local/etc/upgrade_candidates)
+
+pkg() {
+
+if [ $UPG = "0" ]; then
+		echo " $UPG pkg"
+	else
+		echo "^c#ff0000^ $UPG pkg^d^"
+fi
+}
+
+echo $(pkg)

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+. "$HOME/.cache/wal/colors.sh"
+
+mail() {
+
+	size0=$(stat -f "%z" /home/fuzzbox/.mutt/perso/perso)    
+        size1=$(stat -f "%z" /home/fuzzbox/.mutt/pro/pro)    
+#        size2=$(stat -f "%z" /home/fuzzbox/.mutt/gmail/gmail)    
+        if [ $size0 = "0" ] && [ $size1 = "0" ]; then    
+		echo "^c$color2^ ^d^"
+        else    
+                echo "^c#ff0000^  ^d^"
+        fi    
+}
+
+echo $(mail)
+

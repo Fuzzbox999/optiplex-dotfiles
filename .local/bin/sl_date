@@ -1,0 +1,5 @@
+#!/bin/sh
+
+. "$HOME/.cache/wal/colors.sh"
+
+echo "^c$color2^  $(date '+%a %d %b - %H:%M') ^d^"

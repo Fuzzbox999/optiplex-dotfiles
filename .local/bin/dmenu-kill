@@ -1,0 +1,6 @@
+#!/bin/sh
+
+pid=$(ps -U $USER -o pid,%mem,%cpu,comm | gsed -n '1!p' | sort -b -k2 -r  | dmenu -i -l 10 -p "Kill")
+
+kill -15 $pid 2>/dev/null
+# notify-send "RIP$pid"
