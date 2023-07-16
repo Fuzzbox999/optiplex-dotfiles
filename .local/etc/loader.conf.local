@@ -1,0 +1,13 @@
+autoboot_delay="1"
+hw.usb.no_boot_wait=1
+hw.pci.do_power_nodriver=3
+cpu_microcode_load="YES"
+cpu_microcode_name="/boot/firmware/intel-ucode.bin"
+coretemp_load="YES"
+sysctlinfo_load="YES"
+vboxdrv_load="YES"
+kern.vt.fb.default.mode="1920x1080"
+efi_max_resolution="1920x1080"
+kern.vt.color.0.rgb="#000000"
+#kern.vt.color.7.rgb="130,0,0"
+kern.vt.color.15.rgb="255,0,0"
