@@ -1,14 +1,13 @@
 #!/bin/sh
 
 # This .sh :
-# - is triggered by a ranger / sxiv shortcut
+# - is triggered by a nnn plugin, or ranger, or nsxiv...
 # - uses wallpaper filename as an argument
 # - makes use of dmenu (mandatory)
 # - generates a dark or a light theme using pywal and wpgtk
 # - gives the choice among all available backends
 # - applies the colorscheme to the startpage and dunst
 # - copies the wallpaper in Images/Current dir
-# - rebuilds dwm, dmenu and st.
 # - restarts dwm
 
 # include pywal colorscheme
@@ -61,21 +60,7 @@ cp $1 ~/Images/Current/wall.jpg
 # update startpage css
 sassc /home/fuzzbox/.startpage/scss/style.scss /home/fuzzbox/.startpage/style.css
 
-# rebuild and restart dwm
-#rm /home/fuzzbox/.suckless/dwm/config.h
-#cd /home/fuzzbox/.suckless/dwm/ && make
-
 kill -HUP $(pidof dwm)
-
-# rebuild st, tabbed and dmenu
-#rm /home/fuzzbox/.suckless/st/config.h
-#cd /home/fuzzbox/.suckless/st/ && make
-
-#rm /home/fuzzbox/.suckless/dmenu/config.h
-#cd /home/fuzzbox/.suckless/dmenu/ && make
-
-#rm /home/fuzzbox/.suckless/tabbed/config.h
-#cd /home/fuzzbox/.suckless/tabbed/ && make
 
 # update dunst config file
 gsed -i"" --follow-symlinks \
