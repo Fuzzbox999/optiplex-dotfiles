@@ -48,7 +48,7 @@ static const Rule rules[] = {
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",    NULL,     NULL,           1 << 5,    0,          0,           0,        -1 },
 	{ "firefox", NULL,     NULL,           1 << 4,    0,          0,          -1,        -1 },
-	{ "Navigator", NULL,     NULL,           1 << 4,    0,          0,          -1,        -1 },
+	{ "Navigator", NULL,   NULL,           1 << 4,    0,          0,          -1,        -1 },
 	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ "URxvt",   NULL,     NULL,           0,         0,          1,           0,        -1 },
 	{ "st-256color", NULL, NULL,           0,         0,          1,           0,        -1 },
@@ -62,7 +62,7 @@ static const Rule rules[] = {
 static float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static int nmaster     = 1;    /* number of clients in master area */
 static int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
-static int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static int lockfullscreen  = 1; /* 1 will force focus on the fullscreen window */
 static int attachdirection = 0; /* 0 default, 1 above, 2 aside, 3 below, 4 bottom, 5 top */
 
 /* Xresources preferences to load at startup */
@@ -216,7 +216,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_b,           spawn,                SHCMD("firefox") },
 	{ MODKEY|ShiftMask,             XK_c,           spawn,                SHCMD("st -n Config -e nvim ~/.cache/suckless/dwm/config.def.h") },
 	{ MODKEY|ShiftMask,             XK_m,           spawn,                SHCMD("st -n Mutt -e neomutt") },
-	{ MODKEY|ShiftMask,             XK_g,           spawn,                SHCMD("st -n Ranger -e ranger") },
+	{ MODKEY|ShiftMask,             XK_g,           spawn,                SHCMD("st -n n3 -e nnn -De") },
 	{ MODKEY|ShiftMask,             XK_t,           spawn,                SHCMD("thunar") },
 	{ MODKEY|ShiftMask,             XK_n,           spawn,                SHCMD("start-ncmpcpp") },
 	{ MODKEY|ShiftMask,             XK_s,           spawn,                SHCMD("tabbed surf -e") },
