@@ -21,6 +21,8 @@ export EDITOR=nvim
 export LANG='fr_FR.UTF-8'
 export GOPATH=$HOME/.go
 export NNTPSERVER="news.eternal-september.org"
+export NNN_PLUG='p:preview-tabbed;f:fzopen;i:imgview;w:waltheme'
+export NNN_FIFO="/tmp/nnn.fifo"
 alias config='/usr/local/bin/git --git-dir=$HOME/.cache/optiplex-dotfiles --work-tree=$HOME'
 alias cl='clear'
 alias ccl='cd && clear'
@@ -33,6 +35,7 @@ alias update='doas pkg -d update'
 # alias upgrade='doas pkg -d upgrade && check_upgrades' 
 alias upgrade='doas pkg upgrade && check_upgrades'
 alias neo='echo "" && neofetch --ascii_distro freebsd_small --disable uptime packages resolution gpu wm theme icons term shell  --color_blocks disable'
+alias n='nnn -De'
 
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
