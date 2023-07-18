@@ -16,6 +16,8 @@ POWERLEVEL9K_INSTANT_PROMPT=off
 # echo "\n"
 # fortune freebsd-tips && echo "\n"
 
+[ -n "$NNNLVL" ] && PS1="N$NNNLVL $PS1"
+
 export PATH=$PATH:~/.local/bin:~/.go/bin:/usr/local/GNUstep/Applications/WPrefs.app/
 export EDITOR=nvim
 export LANG='fr_FR.UTF-8'
@@ -23,6 +25,8 @@ export GOPATH=$HOME/.go
 export NNTPSERVER="news.eternal-september.org"
 export NNN_PLUG='p:preview-tabbed;f:fzopen;i:imgview;w:waltheme'
 export NNN_FIFO="/tmp/nnn.fifo"
+export NNN_TMPFILE="/home/fuzzbox"
+export NNN_BMS="d:$HOME/Documents;w:$HOME/Images/Wallpapers;t:$HOME/Téléchargements;s:$HOME/.cache/suckless;b:$HOME/.local/bin;c:$HOME/.config;h:$HOME;i:$HOME/Images"
 alias config='/usr/local/bin/git --git-dir=$HOME/.cache/optiplex-dotfiles --work-tree=$HOME'
 alias cl='clear'
 alias ccl='cd && clear'
